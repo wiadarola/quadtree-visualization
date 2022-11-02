@@ -143,6 +143,11 @@ function init() {
             drawBorder = true;
         }
     }
+    
+    // Dat.GUI
+    var func = { draw:function(){ worker.postMessage({ type: 3, height: 3 }) }};
+    const gui = new dat.GUI();
+    gui.add(func,'draw').name("Draw Tree");
 }
 
 
